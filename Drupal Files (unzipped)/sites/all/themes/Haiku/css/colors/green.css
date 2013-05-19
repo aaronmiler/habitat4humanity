@@ -1,0 +1,98 @@
+/* Body and Content */
+a {
+  color: #369616;
+}
+
+a:hover {
+  color: #5cdf30;
+  text-decoration: none;
+}
+
+thead {
+  background-color: #369616 !important; 
+}
+
+.top-bar .active {
+  border-top: 4px solid #369616;
+}
+
+.top-bar ul > li:not(.name):hover {
+  border-top: 4px solid #369616;
+}
+
+#main_title_text {
+  color: #369616; 
+}  
+
+#main_title_text:hover {
+  color: #5cdf30; 
+}
+
+#heading_wrapper {
+  background: #369616; 
+}
+
+.heading_title {
+  border-left: 1px dotted #369616;
+}
+
+.recent_post_info {
+	background-color: #369616;
+}
+
+.post_share li i:hover {
+	color: #369616;
+}
+
+#footer_twitter {
+  background: #369616;
+}
+
+.footer_icons li i:hover {
+	color: #369616;
+}
+
+/* Widgets */
+.tabs a.active {
+  background: #369616;
+}
+
+.view-popular-tags a:hover {
+  background-color: #369616; 
+}
+
+.tabs dd.active, .tabs li.active {
+  border-top: 3px solid #369616;
+}
+
+/*Highlight*/
+#highlight {
+  background: #369616; 
+}
+
+/*Carousel*/
+.carousel_navigation i:hover {
+	color: #369616;
+}
+
+/*Services*/
+#services .services_wrap:hover i {
+	color: #369616;
+}
+
+#services .services_wrap:hover h3 {
+	color: #369616;
+}
+
+/*Elements*/
+ul.accordion > li.active {
+  border-top: 3px solid #369616;
+}
+
+.button {
+	background: #369616 !important;
+}
+
+.button:hover{
+	background: #5cdf30 !important;
+}

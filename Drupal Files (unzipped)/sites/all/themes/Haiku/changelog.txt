@@ -1,0 +1,38 @@
+===Haiku Changelog===
+
+1.0.4 (03/25/13)
+  *Updated Drupal core to 7.21.
+  *Added conditional around share icons in node.tpl.
+  *Fixed some bugs related to the main navigation.
+  *Fixed theme setting definition causing a bug in WAMP installs.
+  *Fixed CSS bug with Drupal admin tabs.
+
+1.0.3 (02/26/13)
+  *Updated Drupal Core in full install to 7.20.
+  *Added example sub-theme (Poetry) and sub-theme documentation.
+  *Added rel=author attribute to submitted by $username meta tag for better SEO.
+  *Updated Ad Block widget and documentation.
+  *Several IE8 fixes.
+  *Fixed bug related to disabling image slider on pages other than front page.
+
+1.0.2 (02/05/13)
+  *Fixed RSS validation bug caused by whitespace in template files.
+  *Updated full Drupal install to 7.19.
+  *Added Haiku Custom Content module to download files.
+  *Added conditional for blog slider dependent on whether or not an image is uploaded.
+  *Fixed missing Drupal edit tabs in two templates.
+  *Added some additional code examples and Views exports.
+  *CSS tweaks.
+  *Updated documentation to clarify several sections.
+
+1.0.1 (01/15/13)
+  *Fixed share icon bug in node.tpl.
+  *Fix for undefined index error related to $field_tags in node templates.
+  *Moved code from /includes/front-page.php (left for reference only) to /tempates/page--front.tpl.
+  *Improvements to demo content (all content moved to node content, Views and blocks).
+  *Fixed bug with footer block regions.
+  *Added theme setting for Twitter feed in footer.
+  *Updated documentation.
+
+1.0 (12/31/12)
+  *Initial release.

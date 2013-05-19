@@ -1,0 +1,189 @@
+/* Switcher styles */
+.bg_patterns_wrap {
+	display: none;
+	margin-bottom: 15px;
+}
+
+.button.secondary {
+  background-color: #E9E9E9 !important;
+}
+.button.secondary:hover {
+  background-color: #c3c3c3 !important;
+}
+
+.color_switch_wrap {
+	clear: both;
+	overflow: auto;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.switch_tile {
+  height: 18px;
+	width: 18px;
+	float: left;
+	margin: 5px;
+}
+
+.blue {
+	background: #1b78ca;
+}
+
+.black {
+	background: #000;
+}
+
+.light-blue {
+	background: #1b96ca;
+}
+
+.green {
+	background: #369616;
+}
+
+.orange {
+	background: #ef842c;
+}
+
+.purple {
+	background: #8622b1;
+}
+
+.red {
+	background: #ca1a1a;
+}
+
+.yellow {
+	background: #d4ce1e;
+}
+
+.subtle-dots {
+	background-image: url('../images/wrapper-backgrounds/subtle_dots.png');
+}
+
+.cream-dust {
+	background-image: url('../images/wrapper-backgrounds/cream_dust.png');
+}
+
+.debut-light {
+	background-image: url('../images/wrapper-backgrounds/debut_light.png');
+}
+
+.dust {
+	background-image: url('../images/wrapper-backgrounds/dust.png');
+}
+
+.gray-jean {
+	background-image: url('../images/wrapper-backgrounds/gray_jean.png');
+}
+
+.linen {
+	background-image: url('../images/wrapper-backgrounds/linen.png');
+}
+
+.retina-dust {
+	background-image: url('../images/wrapper-backgrounds/retina_dust.png');
+}
+
+.striped-lens {
+	background-image: url('../images/wrapper-backgrounds/striped_lens.png');
+}
+
+.cartographer-head {
+	background-image: url('../images/wrapper-backgrounds/cartographer.png');
+}
+
+.dark-wood-bg {
+	background-image: url('../images/wrapper-backgrounds/dark_wood.png');
+}
+
+.debut-dark-bg {
+	background-image: url('../images/backgrounds/debut_dark.png');
+}
+
+.wood-bg {
+	background-image: url('../images/backgrounds/retina_wood.png');
+}
+
+.dark-wood-bg {
+	background-image: url('../images/backgrounds/dark_wood.png');
+}
+
+.grid-bg {
+	background-image: url('../images/backgrounds/noisy_grid.png');
+}
+
+.nistri-bg {
+	background-image: url('../images/backgrounds/nistri.png');
+}
+
+.cartographer-bg {
+	background-image: url('../images/backgrounds/cartographer.png');
+}
+
+.illusion-bg {
+	background-image: url('../images/backgrounds/illusion.png');
+}
+
+.bedge-bg {
+	background-image: url('../images/backgrounds/bedge.png');
+}
+
+#slideout {
+  background: #666;
+  position:fixed;
+  width:150px;
+  height:460px;
+  top:15%;
+  left: -150px;
+  z-index: 40000;
+  
+}
+
+#clickme {
+  height:40px;
+  width:40px;
+  background:#000;
+  margin-left:150px;
+  margin-top: 20px;
+  opacity: .8;
+}
+
+.switch_wrapper {
+  text-align: center; 
+  color: #fff;	
+  clear: both;
+}
+
+#slidecontent {
+  float:left;
+}
+
+#slidecontent h6 {
+	margin: 10px 0px 0px 0px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.bg-nav, #color-nav, #layout-nav, #wrapper-bg-nav {
+  list-style: none;
+  margin-left: 20px;
+  overflow: auto;
+}
+
+.bg-nav img, #color-nav img {
+  margin-top: 5px;
+  margin-bottom: 5px;	
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  
+}
+
+.bg-nav li, #color-nav li, #layout-nav li, #wrapper-bg-nav li {
+  margin-top: 5px; 
+  margin-bottom: 5px;
+  display: inline;
+  margin-right: 8px;
+}

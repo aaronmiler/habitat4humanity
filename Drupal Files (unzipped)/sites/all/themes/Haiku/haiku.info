@@ -1,0 +1,102 @@
+name = Haiku
+description = A Responsive Drupal 7 Theme. 
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = /css/font-awesome.css
+stylesheets[all][] = /css/ie.css
+stylesheets[all][] = /foundation/stylesheets/social_foundicons.css
+stylesheets[all][] = /foundation/stylesheets/general_foundicons.css
+scripts[] = js/jquery.js
+scripts[] = foundation/javascripts/foundation.min.js
+scripts[] = foundation/javascripts/app.js
+scripts[] = js/jquery.isotope.js
+scripts[] = js/jquery.touchSwipe.js
+scripts[] = js/jquery.tweet.js
+scripts[] = js/slimbox2.js
+scripts[] = js/jquery.carouFredSel-6.1.0.js
+scripts[] = js/mobile-map.js
+scripts[] = js/jquery.ui.totop.js
+scripts[] = js/easing.js
+scripts[] = js/jflickrfeed.min.js
+scripts[] = js/jquery.quote_rotator.js
+scripts[] = js/haiku.js
+
+scripts[] = js/style_switch.js
+
+regions[content]        = Content
+regions[sidebar_first]  = First Sidebar
+regions[sidebar_second] = Second Sidebar
+
+regions[services]      = Front Page Services
+
+regions[information]   = Front Page Information
+
+regions[front_blog]    = Front Page Blog
+
+regions[recent_projects] = Recent Projects
+
+regions[clients]      = Front Page Clients
+
+regions[footer_1]       = Footer Box 1
+regions[footer_2]       = Footer Box 2
+regions[footer_3]       = Footer Box 3
+regions[footer_full]    = Footer Full Width
+
+settings[breadcrumbs] = '1'
+
+settings[branding_type] = 'text'
+
+settings[enable_slider] = '0'
+settings[slides_number] = '3'
+settings[slide_caption_1] = 'This is slide caption 1'
+settings[slide_caption_2] = 'This is slide caption 2'
+settings[slide_caption_3] = 'This is slide caption 3'
+
+settings[enable_services] = '1'
+
+settings[enable_information] = '1'
+
+settings[enable_highlight] = '1'
+settings[highlight_text] = 'Highlight Text.'
+
+settings[enable_recent_posts] = '0'
+settings[recent_posts_title] = 'Recent Posts'
+
+settings[enable_recent_projects] = '0'
+settings[recent_projects_title] = 'Recent Projects'
+
+settings[enable_clients] = '1'
+settings[clients_title] = 'Our Clients'
+
+settings[color_scheme] = 'red'
+
+settings[body_background] ='#ECECEC'
+settings[enable_background_pattern] = '0'
+settings[background_select] = 'retina_wood'
+
+settings[main_wrapper_background] ='#FFF'
+settings[enable_main_wrapper_pattern] = '1'
+settings[main_wrapper_pattern_select] = 'subtle_dots'
+
+settings[enable_boxed_layout] = '0'
+
+settings[page_layout] = 'full_width'
+settings[blog_layout] = 'sidebar_right'
+
+settings['font_family'] = 'proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif'
+
+settings[h1] = '36px'
+settings[h2] = '30px'
+settings[h3] = '24px'
+settings[h4] = '18px'
+settings[h5] = '14px'
+settings[h6] = '12px'
+
+settings[enable_footer_twitter] = '1'
+settings[footer_twitter_handle] = 'envato'
+
+settings[enable_primary_footer] = '1'
+
+settings[enable_secondary_footer] = '1'
+settings[secondary_footer_text] = 'Design by <a href="http://refaktorthemes.com" target="_blank">Refaktor</a>'

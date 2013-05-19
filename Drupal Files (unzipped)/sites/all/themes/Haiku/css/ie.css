@@ -1,0 +1,15 @@
+/*IE 8 + 9*/
+#sidebar_wrap .form-actions {padding: 0px 0px 0px 0px \0/IE9;}
+
+.ie8 .carousel_item_image img {
+	height: 193px;
+	width: 250px;
+}
+
+.ie8 .menu_wrap a {
+	font-size: 18px;
+	color: #444;
+	padding: 27px 35px;
+	text-align: center;
+	text-transform: uppercase;
+}

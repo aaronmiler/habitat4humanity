@@ -1,0 +1,87 @@
+.form-item  {margin-top: 8px !important; margin-left: 10px !important;}
+
+.form-type-textfield input {width: 40% !important;}
+
+.fieldset-legend, .options_header {width: 100%;}
+
+#edit-background-select {
+	color: transparent;
+	font-size: 30px;
+}
+
+#edit-main-wrapper-pattern-select {
+	color: transparent;
+	font-size: 30px;
+}
+
+label[for=edit-background-select-dark-wood] {
+	background-image: url('../images/backgrounds/dark_wood.png');
+}
+
+label[for=edit-background-select-retina-wood] {
+	background-image: url('../images/backgrounds/retina_wood.png');
+}
+
+label[for=edit-background-select-debut-dark] {
+	background-image: url('../images/backgrounds/debut_dark.png');
+}
+
+label[for=edit-background-select-noisy-grid] {
+	background-image: url('../images/backgrounds/noisy_grid.png');
+}
+
+label[for=edit-background-select-cartographer] {
+	background-image: url('../images/backgrounds/cartographer.png');
+}
+
+label[for=edit-background-select-bedge] {
+	background-image: url('../images/backgrounds/bedge.png');
+}
+
+label[for=edit-background-select-illusion] {
+	background-image: url('../images/backgrounds/illusion.png');
+}
+
+label[for=edit-background-select-nistri] {
+	background-image: url('../images/backgrounds/nistri.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-subtle-dots] {
+	background-image: url('../images/wrapper-backgrounds/subtle_dots.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-debut-light] {
+	background-image: url('../images/wrapper-backgrounds/debut_light.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-cream-dust] {
+	background-image: url('../images/wrapper-backgrounds/cream_dust.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-gray-jean] {
+	background-image: url('../images/wrapper-backgrounds/gray_jean.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-retina-dust] {
+	background-image: url('../images/wrapper-backgrounds/retina_dust.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-striped-lens] {
+	background-image: url('../images/wrapper-backgrounds/striped_lens.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-linen] {
+	background-image: url('../images/wrapper-backgrounds/linen.png');
+}
+
+label[for=edit-main-wrapper-pattern-select-dust] {
+	background-image: url('../images/wrapper-backgrounds/dust.png');
+}
+
+.form-wrapper {min-height: 20px;}
+
+.fieldset-legend {cursor: pointer;}
+
+.plus {background-image: url('../images/plus.png');  background-repeat: no-repeat; height: 25px; float: right; width: 25px; margin-top: 8px; margin-right: 25px;}
+.minus {background-image: url('../images/minus.png');  background-repeat: no-repeat; height: 25px; float: right; width: 25px; margin-top: 8px; margin-right: 25px;}
+

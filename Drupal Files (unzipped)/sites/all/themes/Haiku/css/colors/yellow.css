@@ -1,0 +1,110 @@
+/* Body and Content */
+a {
+  color: #d4ce1e;
+}
+
+a:hover {
+  color: #ede736;
+  text-decoration: none;
+}
+
+thead {
+  background-color: #d4ce1e !important; 
+}
+
+.top-bar .active {
+  border-top: 4px solid #d4ce1e;
+}
+
+.top-bar ul > li:not(.name):hover {
+  border-top: 4px solid #d4ce1e;
+}
+
+#main_title_text {
+  color: #d4ce1e; 
+}  
+
+#main_title_text:hover {
+  color: #ede736; 
+}
+
+#heading_wrapper {
+  background: #d4ce1e; 
+}
+
+.heading_title {
+  border-left: 1px dotted #d4ce1e;
+}
+
+.recent_post_info {
+	background-color: #d4ce1e;
+}
+
+.post_share li i:hover {
+	color: #d4ce1e;
+}
+
+#footer_twitter {
+  background: #d4ce1e;
+}
+
+.footer_icons li i:hover {
+	color: #d4ce1e;
+}
+
+/* Widgets */
+.tabs a.active {
+  background: #d4ce1e;
+}
+
+.view-popular-tags a:hover {
+  background-color: #d4ce1e; 
+}
+
+.tabs dd.active, .tabs li.active {
+  border-top: 3px solid #d4ce1e;
+}
+
+/*Highlight*/
+#highlight {
+  background: #d4ce1e; 
+}
+
+/*Carousel*/
+.carousel_navigation i:hover {
+	color: #d4ce1e;
+}
+
+/*Services*/
+#services .services_wrap:hover i {
+	color: #d4ce1e;
+}
+
+#services .services_wrap:hover h3 {
+	color: #d4ce1e;
+}
+
+/*Elements*/
+ul.accordion > li.active {
+  border-top: 3px solid #d4ce1e;
+}
+
+.button {
+	background: #d4ce1e !important;
+}
+
+.button:hover{
+	background: #ede736 !important;
+}
+
+.recent_post_info a {
+	color: #444;
+}
+
+#footer_twitter a {
+  color: #444;
+}
+
+#breadcrumbs a {
+	color: #444;
+}
