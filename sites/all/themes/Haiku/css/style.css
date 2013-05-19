@@ -2125,3 +2125,12 @@ div.orbit-wrapper {
 	background-image: url('../images/clock-icon.png'); 
 	height:16px;
 }
+
+.after_footer{
+	font-size:12px;
+}
+
+.footer_social{
+	float:right;
+	margin-top:-8px;
+}

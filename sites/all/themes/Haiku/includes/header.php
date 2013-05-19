@@ -35,9 +35,9 @@ function haiku_header($page){
               <section class="social">
                 <a href="http://visitor.constantcontact.com/d.jsp?m=1101491234386&p=oi">Subscribe to our newsletter</a> | 
                 <a href="http://www.volunteerup.com/ProjectCal.asp?o=131">Volunteer Sign Up</a>
-                <a class="social-icon twitter first" href="/twitter"></a>
-                <a class="social-icon youtube" href="/youtube"></a>
-                <a class="social-icon facebook" href="/facebook"></a>
+                <a class="social-icon twitter first" href="http://twitter.com/pdxrestore"></a>
+                <a class="social-icon youtube" href="http://www.youtube.com/pdxReStore"></a>
+                <a class="social-icon facebook" href="http://www.facebook.com/pdxrestore"></a>
               </section>
               <section class="menu_wrap">
 				          <?php print theme('links__system_main_menu', array(

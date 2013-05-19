@@ -75,6 +75,11 @@ function haiku_footer($page){
         <hr>
         <h6 class="after_footer"><?php echo theme_get_setting('secondary_footer_text'); ?></h6>
         <?php } else { print render($page['footer_full']); }?>  
+        <div class="footer_social">
+                <a class="social-icon twitter first" href="http://twitter.com/pdxrestore"></a>
+                <a class="social-icon youtube" href="http://www.youtube.com/pdxReStore"></a>
+                <a class="social-icon facebook" href="http://www.facebook.com/pdxrestore"></a>
+              </div>
       </div> 
     </div>
     <?php } ?>
