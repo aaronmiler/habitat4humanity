@@ -26,7 +26,7 @@ $share_url = $base_url.'/node/'.$node->nid;
       <?php endif; ?>
          
     <?php endif; ?>
-   
+  
 	  <?php if (render($content['field_image'])) : ?> 
 		  <div class="featured">
 			  <?php if (render($content['field_image'])) : ?>
