@@ -13,11 +13,11 @@ thead {
 }
 
 .top-bar .active {
-  border-top: 4px solid #369616;
+  /*border-top: 4px solid #369616;*/
 }
 
 .top-bar ul > li:not(.name):hover {
-  border-top: 4px solid #369616;
+  /*border-top: 4px solid #369616;*/
 }
 
 #main_title_text {
@@ -67,7 +67,7 @@ thead {
 
 /*Highlight*/
 #highlight {
-  background: #369616; 
+  background: #51B948; 
 }
 
 /*Carousel*/

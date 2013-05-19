@@ -7,7 +7,7 @@ function haiku_header($page){
     <div class="container">
             
       <div class="row">  
-        <div class="three columns branding" <?php if (variable_get('site_slogan')) : ?>style="padding-top: 10px" <?php endif; ?> >
+        <div class="four columns branding" <?php if (variable_get('site_slogan')) : ?>style="padding-top: 10px" <?php endif; ?> >
           <?php if (theme_get_setting('branding_type') == 'logo'): ?>
             <a href="<?php print base_path();?>"><img src="<?php print file_create_url(theme_get_setting('bg_path')); ?>" /></a>
           <?php endif; ?>
@@ -18,7 +18,7 @@ function haiku_header($page){
             </a>
           <?php endif; ?>
         </div>
-      	<div class="nine columns"> 
+      	<div class="eight columns"> 
           <div id="nav">
             <!-- begin menu -->
              <nav class="top-bar">
