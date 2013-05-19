@@ -1,0 +1,14 @@
+name = Taxonomy Block
+description = Displays taxonomy hierarchy in a block.
+package = Taxonomy
+dependencies[] = taxonomy
+configure = admin/config/user-interface/taxonomy_block
+files[] = taxonomy_block.module
+core = 7.x
+
+; Information added by drupal.org packaging script on 2012-05-24
+version = "7.x-1.3"
+core = "7.x"
+project = "taxonomy_block"
+datestamp = "1337850125"
+

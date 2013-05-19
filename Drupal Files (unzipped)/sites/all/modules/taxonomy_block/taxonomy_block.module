@@ -1,0 +1,297 @@
+<?php
+/**
+ * @file
+ * The taxonomy_block module.
+ */
+
+/************************************************************************************
+ *                  CONFIG
+ ***********************************************************************************/
+
+define('TAXONOMY_BLOCK_PERM_ACCESS',  'access taxonomy_block');
+define('TAXONOMY_BLOCK_PERM_ADMIN',   'administer taxonomy_block');
+
+/************************************************************************************
+ *                  DRUPAL HOOKS
+ ***********************************************************************************/
+
+/**
+ * Implementation of hook_help();
+ */
+function taxonomy_block_help($section) {
+  switch ($section) {
+    case 'admin/help#taxonomy_block':
+      return '<p>'.t('Displays taxonomy hierarchy in a block.') . '</p>';
+
+    case 'admin/modules#description':
+      return 'Displays taxonomy hierarchy in a block.';
+  }
+}
+
+/**
+ * Implementation of hook_permission();
+ */
+function taxonomy_block_permission() {
+  return array(
+    TAXONOMY_BLOCK_PERM_ACCESS => array(
+      'title' => t('Access taxonomy block'),
+      'description' => t('Read access for taxonomy block.'),
+    ),
+    TAXONOMY_BLOCK_PERM_ADMIN => array(
+      'title' => t('Administer taxonomy block'),
+      'description' => t('Administration access for taxonomy block.'),
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_menu();
+ */
+function taxonomy_block_menu() {
+  $items = array();
+
+  $items['admin/config/user-interface/taxonomy_block'] = array(
+    'title'             => 'Taxonomy Block',
+    'description'       => 'Displays taxonomy hierarchy',
+    'access arguments'  => array(TAXONOMY_BLOCK_PERM_ADMIN),
+    'page callback'     => 'drupal_get_form',
+    'page arguments'    => array('taxonomy_block_admin_settings'),
+    'type'              => MENU_NORMAL_ITEM,
+    'file'              => 'taxonomy_block.admin.inc',
+  );
+
+  return $items;
+}
+
+
+/**
+ * Implementation of hook_block_info();
+ */
+function taxonomy_block_block_info() {
+  $blocks['taxonomy_block'] = array(
+    'info'  => t('Taxonomy Block'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  return $blocks;
+}
+
+/**
+ * Implementation of hook_block_view();
+ */
+function taxonomy_block_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'taxonomy_block':
+      if ($vid = variable_get('taxonomy_block_vid', 0)) {
+        $block['subject'] = taxonomy_vocabulary_load($vid)->name;
+        $block['content'] = taxonomy_block_generate_list(taxonomy_block_build_taxonomy_tree($vid, 0), (bool) variable_get('taxonomy_block_node_count', 0));
+
+        //add custom link if added in the admin seetings
+        //@todo find a better place/solution to inject it
+        $link = variable_get('taxonomy_block_link', '');
+        $link_title = variable_get('taxonomy_block_link_title', '');
+        $langcode = i18n_langcode();
+
+        if(!empty($link) && !empty($link_title) ) {
+          $output = '<ul><li>' . l(t("@link_title", array('@link_title' => $link_title)), $link, array('attributes' => array('title' => $link_title))) . '</li>';
+          //replacing the first <ul> with $output and so injecting our link
+          $block['content'] = preg_replace('/^<ul>/i', $output, $block['content']);
+        }
+      }
+      break;
+  }
+
+  return $block;
+}
+
+/************************************************************************************
+ *                  API
+ ***********************************************************************************/
+
+/**
+ * Generates & returns a nested array of taxonomy terms for the specified vocabulary id;
+ * @return
+ * @param object $vid
+ * @param object $parent[optional]
+ * @param object $max_depth[optional]
+ */
+function taxonomy_block_build_taxonomy_tree($vid, $parent = 0, $max_depth = NULL) {
+  static $results;
+
+  $args = func_get_args();
+  $hash = md5(implode('-', $args));
+
+  if (!isset($results[$hash])) {
+    $terms = array();
+    $data = taxonomy_get_tree($vid, $parent, $max_depth);
+
+
+    //@see i18n_module
+    //1 = I18N_MODE_LOCALIZE, 2 = I18N_MODE_LANGUAGE
+
+    //this is NOT enough, check if taxonomy i18n is on too
+    if(module_exists('i18n')) {
+      $langcode = i18n_langcode();
+      $taxonomy_mode = i18n_taxonomy_vocabulary_mode($vid);
+
+        if($taxonomy_mode == 2) {
+          //get taxonomy tree for current language
+          $data = i18n_taxonomy_get_tree($vid, $langcode, $parent = 0, $max_depth = NULL, $load_entities = FALSE);
+        }
+    }
+
+    foreach ($data as $term) {
+      //special case if LOCALIZE is used, we need to sort the array alphabetically
+      //otherwise terms will be sorted as if they were in source language lik Abfall (German for Trash)  will be sortet as if it were T Trash
+      if(module_exists('i18n') && ($taxonomy_mode == 1) ) {
+        //get term name in the current language and set it
+        $term->name = entity_label('taxonomy_term', $term);
+      }
+      $terms[$term->tid] = $term;
+    }
+
+    $terms = taxonomy_block_nest_taxonomy_terms($terms, $parent);
+
+    //resort the array alphabetically, because of multilanguage
+    usort($terms, function($a, $b)
+    {
+      return strcmp($a->name, $b->name);
+    });
+
+
+    $results[$hash] = $terms;
+  }
+
+  return $results[$hash];
+}
+
+
+function objsort(){
+
+}
+
+/**
+ * Looks for each term's parent term in the given tree and assigns
+ * the child to the parent.
+ * @return
+ * @param object $terms
+ * @param object $parent
+ */
+function taxonomy_block_nest_taxonomy_terms($terms, $parent) {
+  foreach ($terms as $term) {
+    $parent_tid = isset($term->parents[0]) ? $term->parents[0] : 0;
+
+    if ($parent_tid) {
+      if (isset($terms[$parent_tid])) {
+        $terms[$parent_tid]->children[$term->tid] = $term;
+        unset($terms[$term->tid]);
+      }
+      elseif ($parent_tid != $parent) {
+        taxonomy_block_nest_taxonomy_terms_child($terms, $parent_tid, $term);
+        unset($terms[$term->tid]);
+      }
+    }
+  }
+
+  return $terms;
+}
+
+/**
+ * Recursive function which nests the child element within the appropriate
+ * parent element in the given terms tree.
+ * @return
+ * @param object $terms
+ * @param object $parent_tid
+ * @param object $child
+ */
+function taxonomy_block_nest_taxonomy_terms_child(&$terms, $parent_tid, $child) {
+  foreach ($terms as &$term) {
+    if ($term->tid == $parent_tid) {
+      $term->children[$child->tid] = $child;
+      break;
+    }
+    elseif (!empty($term->children)) {
+      taxonomy_block_nest_taxonomy_terms_child($term->children, $parent_tid, $child);
+    }
+  }
+}
+
+/**
+ * Generates a nested HTML list from hierarchy items.
+ * @return string $output
+ * @param array $hierarchy
+ * @param bool $show_counts[optional]
+ */
+function taxonomy_block_generate_list($hierarchy, $show_counts = FALSE) {
+  $items = array();
+
+  foreach ($hierarchy as $term) {
+
+    //i18n title, get translated title
+    $title = entity_label('taxonomy_term', $term);
+
+    if ($show_counts) {
+      $title .= t(' (@count)', array('@count' => taxonomy_block_count_nodes_term($term->tid)));
+    }
+
+    $item = l($title, 'taxonomy/term/' . $term->tid, array('attributes' => array('title' => $title)));
+
+    if (!empty($term->children)) {
+      $item .= taxonomy_block_generate_list($term->children, $show_counts);
+    }
+
+    $items[] = $item;
+  }
+
+  return theme('taxonomy_block_list',  array('items' => $items));
+}
+
+/**
+ * Counts the number of nodes assigned to a term.
+ * @return integer $count - number of nodes
+ * @param integer $tid - term id
+ */
+function taxonomy_block_count_nodes_term($tid) {
+  return db_select('taxonomy_index', 'ti')
+            ->condition('tid', (int) $tid)
+            ->countQuery()
+            ->execute()
+            ->fetchField();
+}
+
+
+/************************************************************************************
+ *                  THEMING
+ ***********************************************************************************/
+
+/**
+ * Implements hook_theme().
+ */
+function taxonomy_block_theme() {
+  return array(
+    'taxonomy_block_list' => array(
+      // We use 'variables' when the item to be passed is an array whose
+      // structure must be described here.
+      'variables' => array(
+        'items' => NULL,
+      ),
+    )
+  );
+}
+
+/**
+ * Theming a simple list for taxonoym block.
+ */
+
+function theme_taxonomy_block_list($variables) {
+  $items = $variables['items'];
+
+  $output = '<ul>';
+  foreach($items as $key => $link) {
+    $output .= '<li>' . $link . '</li>';
+  }
+  $output .= '</ul>';
+
+  return $output;
+}

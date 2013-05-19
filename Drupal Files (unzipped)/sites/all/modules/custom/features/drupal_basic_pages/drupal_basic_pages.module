@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drupal Basic Pages feature.
+ */
+
+include_once 'drupal_basic_pages.features.inc';

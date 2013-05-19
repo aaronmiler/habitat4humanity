@@ -1,0 +1,16 @@
+name = Drupal Basic Pages
+description = Basic Drupal pages for functionality
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = field_sql_storage
+dependencies[] = node_export_features
+dependencies[] = node
+dependencies[] = text
+features[features_api][] = api:1
+features[field][] = node-page-body
+features[node][] = page
+features[node_export_features][] = 5539fdc7-1e41-4aa4-f150-af59e19f950e
+features[node_export_features][] = aae5dc07-9f21-7b04-c986-14bc265f7adc
+features[node_export_features][] = c425b5d3-ca72-7544-1129-4cabeed377b0
+features[node_export_features][] = de222796-8d52-52c4-6dd8-f9e27d283868

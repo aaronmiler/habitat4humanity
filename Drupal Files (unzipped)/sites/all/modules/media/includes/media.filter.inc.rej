@@ -1,0 +1,36 @@
+***************
+*** 196,221 ****
+      return '';
+    }
+  
+-   if ($wysiwyg) {
+-     $settings['wysiwyg'] = $wysiwyg;
+-     // If sending markup to a WYSIWYG, we need to pass the file infomation so
+-     // that a inline macro can be generated when the WYSIWYG is detached.
+-     // The WYSIWYG plugin is expecting this information in the format of a
+-     // urlencoded JSON string stored in the data-file_info attribute of the
+-     // element.
+-     $element = media_get_file_without_label($file, $tag_info['view_mode'], $settings);
+-     $data = drupal_json_encode(array(
+-       'type' => 'media',
+-       'fid' => $file->fid,
+-       'view_mode' => $tag_info['view_mode'],
+-     ));
+-     $element['#attributes']['data-file_info'] = urlencode($data);
+-     $element['#attributes']['class'][] = 'media-element';
+-   }
+-   else {
+-     $element = media_get_file_without_label($file, $tag_info['view_mode'], $settings);
+-   }
+- 
+    drupal_alter('media_token_to_markup', $element, $tag_info, $settings);
+    return drupal_render($element);
+  }
+--- 199,205 ----
+      return '';
+    }
+  
++   $element = media_get_file_without_label($file, $tag_info['view_mode'], $settings);
+    drupal_alter('media_token_to_markup', $element, $tag_info, $settings);
+    return drupal_render($element);
+  }

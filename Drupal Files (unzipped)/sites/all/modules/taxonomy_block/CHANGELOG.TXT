@@ -1,0 +1,16 @@
+6.x-1.0: First 7.x release.
+
+7.x 1.1
+----------------------
+added title attribute http://drupal.org/node/1567486
+own theming function for better html output: http://drupal.org/node/1545156
+i18n support http://drupal.org/node/1540828
+added to right menu, config link on module page: http://drupal.org/node/1229414
+.info fix http://drupal.org/node/1502936
+
+
+7.x 1.2
+----------------------
+renamed taxonomy_block.settings.inc to taxonomy_block.admin.inc
+added new setting to inject a custom link at the beginning of the block. why? to be able to add a custom link to an overview page, for example with images using views.
+sample www.texturecase.com first item on the left menu.

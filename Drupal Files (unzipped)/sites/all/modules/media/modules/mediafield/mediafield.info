@@ -1,0 +1,6 @@
+name = Media Field
+description = "Provides a field type that stores media-specific data. <em>Deprecated by the core File field type.</em>"
+package = Media
+core = 7.x
+version = 7.x-2.0-unstable3+24-dev
+dependencies[] = media
