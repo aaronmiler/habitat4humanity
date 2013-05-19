@@ -30,7 +30,6 @@
   <?php endif; ?>
 
   <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print $field->content; ?>
+    <div class="row"><?php print $field->content; ?></div>
   <?php print $field->wrapper_suffix; ?>
 <?php endforeach; ?>
