@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Habitat Site feature.
+ */
+
+include_once 'habitat_site.features.inc';
