@@ -33,8 +33,8 @@ function haiku_header($page){
               <li class="toggle-topbar"><a href="#"></a></li>
               </ul>
               <section class="social">
-                <a href="/subscribe">Subscribe to our newsletter</a> | 
-                <a href="/signup">Volunteer Sign Up</a>
+                <a href="http://visitor.constantcontact.com/d.jsp?m=1101491234386&p=oi">Subscribe to our newsletter</a> | 
+                <a href="http://www.volunteerup.com/ProjectCal.asp?o=131">Volunteer Sign Up</a>
                 <a class="social-icon twitter first" href="/twitter"></a>
                 <a class="social-icon youtube" href="/youtube"></a>
                 <a class="social-icon facebook" href="/facebook"></a>

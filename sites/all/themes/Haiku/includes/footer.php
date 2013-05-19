@@ -57,9 +57,12 @@ function haiku_footer($page){
         <?php } else { print render($page['footer_3']); }?>      
       </div>
       <div class="three columns">
-        <?php if(!$page['footer_3']) {?>
-        <h2>Hours</h2>        
-        <?php } else { print render($page['footer_3']); }?>      
+        <h2>Hours</h2>
+        <p>9 a.m. to 5 p.m.<br/>
+        Monday thru Saturday<br/>
+        <br/>
+        <span class="footer-icon clock-icon"></span>donations until 4.30 p.m.
+      </p>
       </div>
       
     </div> 
