@@ -2134,6 +2134,10 @@ div.orbit-wrapper {
 	margin-top:-8px;
 }
 
+.h4h_header{
+	min-height:130px;
+}
+
 .h4h_sidebar{
 	background-color:#eee;
 	padding:0 20px;
