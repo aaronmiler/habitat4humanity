@@ -95,8 +95,8 @@
        
           <div class="heading_title"><?php echo theme_get_setting('recent_projects_title');?></div>
           <div class="carousel_navigation">
-		        <a id="prev" class="prev" href="#"><i class="icon-chevron-left"></i></a>
-					  <a id="next" class="next" href="#"><i class="icon-chevron-right"></i></a>
+	    <a id="prev" class="prev" href="#"><i class="icon-chevron-left"></i></a>
+	    <a id="next" class="next" href="#"><i class="icon-chevron-right"></i></a>
           </div>
       
       </div>
