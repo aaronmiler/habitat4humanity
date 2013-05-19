@@ -44,7 +44,7 @@ header {
 }
 
 .branding {
-	padding-top: 20px;
+	padding-top: 30px;
 }
 
 .bottom_spacer {
@@ -253,7 +253,7 @@ hr {
 }
 
 .top-bar .dropdown .active {
-	background: #333;
+	background: #a09c8e;
 	box-shadow: none;
 	margin-top: 0;
 	border-top: none;
@@ -296,8 +296,10 @@ hr {
 }
 
 .top-bar ul > li a:not(.button) {
-  color: #444;
+  color: #a09c8e;
   height: 77px;
+  font-family: Futura, Arial,sans-serif !important;
+	letter-spacing: -1px;
   line-height: 65px;
   padding: 0px 10px;
   text-transform: uppercase;
@@ -1523,13 +1525,13 @@ span.faq-head-image {
 }
 
 #footer p {
-	font-size: 16px;
+	font-size: 11px;
 }
 
 #footer h2 {
   margin-bottom: 15px; 
   color: #444;
-  font-size: 26px;
+  font-size: 18px;
 }
 
 .footer_icons {
@@ -2095,4 +2097,31 @@ div.orbit-wrapper {
 
 .social-icon.first{
 	margin-left:24px;
+}
+
+#footer span.footer-icon{
+	display:inline-block;
+	margin:0px 6px 0 0;
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	margin-right:6px;	
+}
+
+#footer span.phone{
+	width:15px;
+	height:15px;
+  background-image: url('../images/phone-icon.png'); 
+	
+}
+
+#footer span.contact-map{
+	width:16px;
+	background-image: url('../images/map-icon.png'); 
+	height:14px;
+}
+
+#footer span.clock-icon{
+	width:16px;
+	background-image: url('../images/clock-icon.png'); 
+	height:16px;
 }
