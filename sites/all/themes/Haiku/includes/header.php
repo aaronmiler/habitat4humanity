@@ -32,6 +32,13 @@ function haiku_header($page){
 	            </li>
               <li class="toggle-topbar"><a href="#"></a></li>
               </ul>
+              <section class="social">
+                <a href="/subscribe">Subscribe to our newsletter</a> | 
+                <a href="/signup">Volunteer Sign Up</a>
+                <a class="social-icon twitter first" href="/twitter"></a>
+                <a class="social-icon youtube" href="/youtube"></a>
+                <a class="social-icon facebook" href="/facebook"></a>
+              </section>
               <section class="menu_wrap">
 				          <?php print theme('links__system_main_menu', array(
 				            'attributes' => array(
