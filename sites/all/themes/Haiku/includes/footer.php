@@ -38,22 +38,27 @@ function haiku_footer($page){
     <?php if (theme_get_setting('enable_primary_footer') == '1') { ?>
     <div class="row">
     
-      <div class="four columns">
+      <div class="three columns">
         <?php if(!$page['footer_1']) {?>
         <h2>Footer Block 1</h2>
         <?php } else { print render($page['footer_1']); }?>   
       </div> 
   
-      <div class="four columns">
+      <div class="three columns">
         <?php if(!$page['footer_2']) {?>
         <h2>Footer Block 2</h2>
         <?php } else { print render($page['footer_2']); }?>  
       </div>
       
                 
-      <div class="four columns">
+      <div class="three columns">
         <?php if(!$page['footer_3']) {?>
         <h2>Footer Block 3</h2>        
+        <?php } else { print render($page['footer_3']); }?>      
+      </div>
+      <div class="three columns">
+        <?php if(!$page['footer_3']) {?>
+        <h2>Hours</h2>        
         <?php } else { print render($page['footer_3']); }?>      
       </div>
       
