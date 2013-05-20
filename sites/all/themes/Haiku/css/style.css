@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
 /* Body and Content */
 body {
   font-size: 14px;
@@ -20,7 +22,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Oswald', sans-serif;
   font-weight: 200;  
 }
 
@@ -298,12 +300,11 @@ hr {
 .top-bar ul > li a:not(.button) {
   color: #a09c8e;
   height: 50px;
-  font-family: Futura, Arial,sans-serif !important;
-	letter-spacing: -1px;
+	font-family: 'Oswald', sans-serif !important;
   line-height: 65px;
   padding: 0px 10px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
    -moz-transition: none;
    -webkit-transition: none;
    -o-transition: none;
@@ -1721,6 +1722,9 @@ span.faq-head-image {
   #highlight {
 	  max-width: 800px;
   }
+  .social {
+  	margin: 15px 15px 0 12px !important;
+  }
   
 }
 
@@ -1885,6 +1889,9 @@ span.faq-head-image {
     font-size: 16px;
   }
   
+  .social {
+  	margin: 15px 15px 0 12px !important;
+  }
 }
 
 @media screen and (max-width: 480px) { 
@@ -1951,6 +1958,9 @@ span.faq-head-image {
   
   #heading_wrapper {
 	  text-align: center;
+  }
+  .social {
+  	margin: 15px 15px 0 12px !important;
   }
 }
 
@@ -2132,6 +2142,10 @@ div.orbit-wrapper {
 .footer_social{
 	float:right;
 	margin-top:-8px;
+}
+
+.h4h_header{
+	min-height:130px;
 }
 
 .h4h_sidebar{
