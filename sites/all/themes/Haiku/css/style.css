@@ -300,6 +300,7 @@ hr {
 .top-bar ul > li a:not(.button) {
   color: #a09c8e;
   height: 50px;
+  font-weight:400;
 	font-family: 'Oswald', sans-serif !important;
   line-height: 65px;
   padding: 0px 10px;
