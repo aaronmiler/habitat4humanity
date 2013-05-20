@@ -1721,6 +1721,9 @@ span.faq-head-image {
   #highlight {
 	  max-width: 800px;
   }
+  .social {
+  	margin: 15px 15px 0 12px;
+  }
   
 }
 
@@ -1885,6 +1888,9 @@ span.faq-head-image {
     font-size: 16px;
   }
   
+  .social {
+  	margin: 15px 15px 0 12px;
+  }
 }
 
 @media screen and (max-width: 480px) { 
@@ -1951,6 +1957,9 @@ span.faq-head-image {
   
   #heading_wrapper {
 	  text-align: center;
+  }
+  .social {
+  	margin: 15px 15px 0 12px;
   }
 }
 
