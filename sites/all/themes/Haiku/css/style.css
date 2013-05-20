@@ -2089,7 +2089,11 @@ div.orbit-wrapper {
 	vertical-align:middle;
 	background-repeat:no-repeat;
 }
-
+@media screen and (max-width: 940px) { 
+	.social{
+		display:none;
+	}
+}
 .social-icon:hover{
 	background-position: 0 -22px;
 }
