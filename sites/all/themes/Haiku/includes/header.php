@@ -4,7 +4,7 @@ function haiku_header($page){
 ?>
   <div id="main_wrapper">
   <header>
-    <div class="container">
+    <div class="container h4h_header">
             
       <div class="row">  
         <div class="four columns branding" <?php if (variable_get('site_slogan')) : ?>style="padding-top: 10px" <?php endif; ?> >
